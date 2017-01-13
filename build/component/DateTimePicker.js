@@ -135,7 +135,7 @@ var DateTimePicker = function (_Component) {
         tooltips: tooltips
       };
       if (getValue) {
-        (0, _jquery2.default)('#' + id).datetimepicker(options).on('dp.change', this.handleGetValue);
+        (0, _jquery2.default)('#' + id).datetimepicker(options).on('dp.hide', this.handleGetValue);
       } else {
         (0, _jquery2.default)('#' + id).datetimepicker(options);
       }
@@ -201,8 +201,8 @@ DateTimePicker.propTypes = {
   placeholder: _react.PropTypes.string,
   locale: _react.PropTypes.string,
   format: _react.PropTypes.string,
-  minDate: _react.PropTypes.arrayOf(_react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object])),
-  maxDate: _react.PropTypes.arrayOf(_react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object])),
+  minDate: _react.PropTypes.object,
+  maxDate: _react.PropTypes.object,
   disabledDates: _react.PropTypes.arrayOf(_react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object])),
   daysOfWeekDisabled: _react.PropTypes.arrayOf(_react.PropTypes.number),
   viewMode: _react.PropTypes.oneOf(['decades', 'years', 'months', 'days']),

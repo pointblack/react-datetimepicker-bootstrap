@@ -13,18 +13,8 @@ class DateTimePicker extends Component {
     placeholder: PropTypes.string,
     locale: PropTypes.string,
     format: PropTypes.string,
-    minDate: PropTypes.arrayOf(
-      PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object
-      ])
-    ),
-    maxDate: PropTypes.arrayOf(
-      PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object
-      ])
-    ),
+    minDate: PropTypes.object,
+    maxDate: PropTypes.object,
     disabledDates: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.string,
@@ -130,7 +120,7 @@ class DateTimePicker extends Component {
     }
     if (getValue) {
       $(`#${id}`).datetimepicker(options).on(
-        'dp.change', this.handleGetValue
+        'dp.hide', this.handleGetValue
       )
     } else {
       $(`#${id}`).datetimepicker(options)
