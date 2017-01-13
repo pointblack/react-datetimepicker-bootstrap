@@ -27,6 +27,12 @@ class DateTimePicker extends Component {
         PropTypes.object
       ])
     ),
+    enabledDates: PropTypes.arrayOf(
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+      ])
+    ),
     daysOfWeekDisabled: PropTypes.arrayOf(
       PropTypes.number
     ),
@@ -95,6 +101,7 @@ class DateTimePicker extends Component {
       locale,
       format,
       disabledDates,
+      enabledDates,
       daysOfWeekDisabled,
       viewMode,
       allowInputToggle,
@@ -112,6 +119,7 @@ class DateTimePicker extends Component {
       locale,
       format,
       disabledDates,
+      enabledDates,
       daysOfWeekDisabled,
       viewMode,
       allowInputToggle: icon === undefined &&
