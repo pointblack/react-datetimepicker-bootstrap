@@ -13,8 +13,14 @@ class DateTimePicker extends Component {
     placeholder: PropTypes.string,
     locale: PropTypes.string,
     format: PropTypes.string,
-    minDate: PropTypes.object,
-    maxDate: PropTypes.object,
+    minDate: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object
+    ]),
+    maxDate: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object
+    ]),
     disabledDates: PropTypes.arrayOf(
       PropTypes.oneOfType([
         PropTypes.string,
@@ -129,8 +135,8 @@ class DateTimePicker extends Component {
   setRef = (ref) => {
     this.componentRef = ref
   }
-  handleGetValue = () => {
-    return this.props.getValue(this.componentRef.value)
+  handleGetValue = (date, oldDate) => {
+    return this.props.getValue({date, oldDate})
   }
   iconSet = (position) => {
     const { iconType, icon } = this.props

@@ -50,8 +50,8 @@ var DateTimePicker = function (_Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DateTimePicker.__proto__ || Object.getPrototypeOf(DateTimePicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = _this.props, _this.setRef = function (ref) {
       _this.componentRef = ref;
-    }, _this.handleGetValue = function () {
-      return _this.props.getValue(_this.componentRef.value);
+    }, _this.handleGetValue = function (date, oldDate) {
+      return _this.props.getValue({ date: date, oldDate: oldDate });
     }, _this.iconSet = function (position) {
       var _this$props = _this.props,
           iconType = _this$props.iconType,
@@ -201,8 +201,8 @@ DateTimePicker.propTypes = {
   placeholder: _react.PropTypes.string,
   locale: _react.PropTypes.string,
   format: _react.PropTypes.string,
-  minDate: _react.PropTypes.object,
-  maxDate: _react.PropTypes.object,
+  minDate: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]),
+  maxDate: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]),
   disabledDates: _react.PropTypes.arrayOf(_react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object])),
   daysOfWeekDisabled: _react.PropTypes.arrayOf(_react.PropTypes.number),
   viewMode: _react.PropTypes.oneOf(['decades', 'years', 'months', 'days']),
