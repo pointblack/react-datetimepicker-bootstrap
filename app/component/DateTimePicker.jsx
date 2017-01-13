@@ -135,7 +135,9 @@ class DateTimePicker extends Component {
   setRef = (ref) => {
     this.componentRef = ref
   }
-  handleGetValue = (date, oldDate) => {
+  handleGetValue = (data) => {
+    const date = data.date
+    const oldDate = data.oldDate
     return this.props.getValue({date, oldDate})
   }
   iconSet = (position) => {

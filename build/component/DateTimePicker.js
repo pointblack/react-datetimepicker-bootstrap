@@ -50,7 +50,9 @@ var DateTimePicker = function (_Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DateTimePicker.__proto__ || Object.getPrototypeOf(DateTimePicker)).call.apply(_ref, [this].concat(args))), _this), _this.state = _this.props, _this.setRef = function (ref) {
       _this.componentRef = ref;
-    }, _this.handleGetValue = function (date, oldDate) {
+    }, _this.handleGetValue = function (data) {
+      var date = data.date;
+      var oldDate = data.oldDate;
       return _this.props.getValue({ date: date, oldDate: oldDate });
     }, _this.iconSet = function (position) {
       var _this$props = _this.props,
