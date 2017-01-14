@@ -118,6 +118,7 @@ var DateTimePicker = function (_Component) {
           icon = _state.icon,
           inline = _state.inline,
           sideBySide = _state.sideBySide,
+          showTodayButton = _state.showTodayButton,
           calendarWeeks = _state.calendarWeeks,
           toolbarPlacement = _state.toolbarPlacement,
           tooltips = _state.tooltips;
@@ -134,6 +135,7 @@ var DateTimePicker = function (_Component) {
         maxDate: maxDate,
         inline: inline,
         sideBySide: sideBySide,
+        showTodayButton: showTodayButton,
         calendarWeeks: calendarWeeks,
         toolbarPlacement: toolbarPlacement,
         tooltips: tooltips
@@ -218,6 +220,7 @@ DateTimePicker.propTypes = {
   inline: _react.PropTypes.bool,
   sideBySide: _react.PropTypes.bool,
   calendarWeeks: _react.PropTypes.bool,
+  showTodayButton: _react.PropTypes.bool,
   toolbarPlacement: _react.PropTypes.oneOf(['default', 'top', 'bottom']),
   disabled: _react.PropTypes.bool,
   tooltips: _react.PropTypes.shape({
@@ -244,6 +247,7 @@ DateTimePicker.defaultProps = {
   locale: 'en',
   hasFeedback: false,
   calendarWeeks: false,
+  showTodayButton: false,
   toolbarPlacement: 'default',
   tooltips: {
     today: 'Go to today',

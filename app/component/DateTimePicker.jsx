@@ -48,6 +48,7 @@ class DateTimePicker extends Component {
     inline: PropTypes.bool,
     sideBySide: PropTypes.bool,
     calendarWeeks: PropTypes.bool,
+    showTodayButton: PropTypes.bool,
     toolbarPlacement: PropTypes.oneOf([
       'default', 'top', 'bottom'
     ]),
@@ -76,6 +77,7 @@ class DateTimePicker extends Component {
     locale: 'en',
     hasFeedback: false,
     calendarWeeks: false,
+    showTodayButton: false,
     toolbarPlacement: 'default',
     tooltips: {
       today: 'Go to today',
@@ -111,6 +113,7 @@ class DateTimePicker extends Component {
       icon,
       inline,
       sideBySide,
+      showTodayButton,
       calendarWeeks,
       toolbarPlacement,
       tooltips
@@ -128,6 +131,7 @@ class DateTimePicker extends Component {
       maxDate,
       inline,
       sideBySide,
+      showTodayButton,
       calendarWeeks,
       toolbarPlacement,
       tooltips
